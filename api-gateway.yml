@@ -15,15 +15,15 @@ authserver:
 # Note that we don't proxy the calls to the authorization server. The reason being that 
 # Spring cloud security would need to secure the api gateway before it can route the 
 # requests using zuul
-#zuul:
-#  routes:
-#    user-webservice: /api/user/**
-#    task-webservice: /api/task/**
-#    web-portal: /**
-#    user: 
-#      path: /api/loggedinuser/**
-#      stripPrefix: true
-#      url: http://${authserver.hostname}:${authserver.port}/${authserver.contextPath}
+zuul:
+  routes:
+    user-webservice: /api/user/**
+    task-webservice: /api/task/**
+    web-portal: /**
+    user: 
+      path: /api/loggedinuser/**
+      stripPrefix: true
+      url: http://${authserver.hostname}:${authserver.port}/${authserver.contextPath}
 # Define the Eureka server that handles service registration
 eureka:
   client:
