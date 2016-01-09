@@ -18,8 +18,8 @@ authserver:
 zuul:
   routes:
     user-webservice: /api/user/**
-    task-webservice: /api/task/**
-    web-portal: /**
+    #task-webservice: /api/task/**
+    #web-portal: /**
     user: 
       path: /api/loggedinuser/**
       stripPrefix: true
